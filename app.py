@@ -48,7 +48,7 @@ def about():
 #     with app.app_context():
 #         db.create_all()
 #         print("Database Created")
-
+# check
 
 if __name__ == '__main__':
     app.run(debug=True)
