@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: getting-started2
+  name: getting-started
   labels:
-    app: getting-started2
+    app: getting-started
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: getting-started2
+      app: getting-started
   template:
     metadata:
       labels:
-        app: getting-started2
+        app: getting-started
     spec:
       containers:
         - name: getting-started-pod2
           image: amaa00/flask-app2:1.0
-          ports:
+          port:
             - containerPort: 8000
