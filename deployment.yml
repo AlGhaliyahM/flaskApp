@@ -18,4 +18,16 @@ spec:
         - name: getting-started-pod2
           image: amaa00/flask-app2:1.0
           port:
-            - containerPort: 8000
+            - containerPort: 8081
+
+---
+kind: Service
+metadata:
+  name: getting-started-service2
+spec:
+  selector:
+    app: getting-started
+  ports:
+    - protocol: TCP
+      port: 8081
+      targetPort: 8081
