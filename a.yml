@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: getting-started-pod2
+spec:
+  containers:
+    - name: getting-started-pod2
+      image: amaa00/flask-app2:1.0
+      ports:
+        - containerPort: 5000
